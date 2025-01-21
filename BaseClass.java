@@ -31,7 +31,7 @@ public class BaseClass {
 
 	public void setup() throws Exception {
 		if (driver == null) {
-			System.out.println("driver is null");
+			System.out.println("driver is not initialized");
 			String directory = System.getProperty("user.dir");
 			System.out.println("The project part is " + directory);
 
