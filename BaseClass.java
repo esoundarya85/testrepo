@@ -33,6 +33,7 @@ public class BaseClass {
 		if (driver == null) {
 			System.out.println("driver is not initialized yet for the project");
 			System.out.println("second verification driver is not initialized yet for the project");
+			System.out.println("third verification driver is not initialized yet for the project");
 			String directory = System.getProperty("user.dir");
 			System.out.println("The project part is " + directory);
 
