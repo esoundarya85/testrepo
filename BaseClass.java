@@ -2,7 +2,7 @@ package baseclass;
 
 import static org.testng.Assert.assertEquals;
 
-import java.io.FileNotFoundException;
+//import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.time.Duration;
 import java.util.Properties;
@@ -13,7 +13,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.safari.SafariDriver;
-import org.openqa.selenium.safari.SafariOptions;
+//import org.openqa.selenium.safari.SafariOptions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -31,14 +31,10 @@ public class BaseClass {
 
 	public void setup() throws Exception {
 		if (driver == null) {
-			System.out.println("driver is not initialized yet for the project");
-			System.out.println("second verification driver is not initialized yet for the project");
-			System.out.println("third verification driver is not initialized yet for the project");
 			String directory = System.getProperty("user.dir");
 			System.out.println("The project part is " + directory);
 
-			FileReader fr1 = new FileReader(
-					directory + "//src//test//resources//configfiles//configuration.properties");
+			FileReader fr1 = new FileReader(directory + "//src//test//resources//configfiles//configuration.properties");
 			FileReader fr2 = new FileReader(directory + "//src//test//resources//configfiles//locators.properties");
 			config.load(fr1);
 			locators.load(fr2);
@@ -80,10 +76,10 @@ public class BaseClass {
 			assertEquals(currenturl, expectedurl);
 		}
 	}
-	
+
 	public void close() throws Exception {
 		Thread.sleep(1000);
 		driver.close();
 	}
-	
+
 }
