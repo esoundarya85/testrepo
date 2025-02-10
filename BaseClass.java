@@ -39,6 +39,7 @@ public class BaseClass {
 			config.load(fr1);
 			locators.load(fr2);
 		}
+		System.out.println("Testing");
 		if (config.getProperty("browser").equalsIgnoreCase("Chrome")) {
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
